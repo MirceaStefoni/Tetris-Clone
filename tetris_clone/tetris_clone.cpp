@@ -1,13 +1,24 @@
 #include "raylib.h"
+#include "Grid.hpp"
+#include "Tetrominos.cpp"
 
 int main() {
-    InitWindow(800, 450, "Raylib + Visual Studio");
+
+    InitWindow(300, 600, "Tetris Clone C++");
+    SetTargetFPS(60);
+
+    Grid gameGrid = Grid();
+    gameGrid.gridPrint();
+
+
     while (!WindowShouldClose()) {
+
         BeginDrawing();
         ClearBackground(RAYWHITE);
-        DrawText("Hello, Raylib!", 190, 200, 20, LIGHTGRAY);
+        gameGrid.gridDraw();
         EndDrawing();
     }
+
     CloseWindow();
     return 0;
 }

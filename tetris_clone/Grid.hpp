@@ -4,19 +4,27 @@
 
 #include <iostream>
 #include <vector>
+#include "raylib.h"
 
 class Grid {
 private:
 
-	int rows = 20;
-	int cols = 10;
-
-	std::vector<std::vector<int>> grid;
-
+	int rows;
+	int cols;
+	int cellSize;
+	std::vector<Color> colors;
 
 public:
 
+	int grid[20][10];
 
+	Grid();
+
+	void gridInit();
+
+	void gridPrint() const;
+
+	void gridDraw() const;
 
 };
 
