@@ -14,6 +14,10 @@ public:
 	Tetromino();
 	
 	void tetrominoDraw();
+
+	void TetrominoMove(int rows, int cols);
+
+	std::vector<Position> getCellPosition();
 	
 	std::map<int, std::vector<Position>> cells;
 
@@ -21,6 +25,9 @@ private:
 	int cellSize;
 	int rotationState;
 	std::vector<Color> colors;
+
+	int x;
+	int y;
 
 };
 
