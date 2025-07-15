@@ -26,6 +26,8 @@ public:
 
 	void gridDraw() const;
 
+	bool isCellOutside(int row, int col);
+
 };
 
 
