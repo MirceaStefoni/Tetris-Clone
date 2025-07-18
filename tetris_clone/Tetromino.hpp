@@ -21,6 +21,8 @@ public:
 	
 	std::map<int, std::vector<Position>> cells;
 
+	void TetrominoRotate();
+
 private:
 	int cellSize;
 	int rotationState;

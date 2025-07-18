@@ -36,3 +36,13 @@ std::vector<Position> Tetromino::getCellPosition() {
 	return moveTiles;
 
 }
+
+void Tetromino::TetrominoRotate()
+{
+	rotationState++;
+
+	if (rotationState == (int)cells.size())
+	{
+		rotationState = 0;
+	}
+}

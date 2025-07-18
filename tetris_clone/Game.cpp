@@ -55,6 +55,11 @@ void Game::handleInput()
 			currentShape.TetrominoMove(0, -1);
 		}
 		break;
+
+	case KEY_UP:
+	case KEY_W:
+		currentShape.TetrominoRotate();
+		break;
 	}
 }
 
