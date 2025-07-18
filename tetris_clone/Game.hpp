@@ -18,6 +18,8 @@ public:
 
 	void Draw();
 
+	void Rotate();
+
 	Grid grid;
 
 private:

@@ -58,7 +58,7 @@ void Game::handleInput()
 
 	case KEY_UP:
 	case KEY_W:
-		currentShape.TetrominoRotate();
+		Rotate();
 		break;
 	}
 }
@@ -67,6 +67,17 @@ void Game::Draw() {
 
 	grid.gridDraw();
 	currentShape.tetrominoDraw();
+}
+
+void Game::Rotate()
+{
+	currentShape.TetrominoRotate();
+
+	if (isBlockOutside())
+	{
+		currentShape.TetrominoUndoRotate();
+	}
+
 }
 
 bool Game::isBlockOutside()

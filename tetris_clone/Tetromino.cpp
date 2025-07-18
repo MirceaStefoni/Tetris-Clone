@@ -46,3 +46,13 @@ void Tetromino::TetrominoRotate()
 		rotationState = 0;
 	}
 }
+
+void Tetromino::TetrominoUndoRotate()
+{
+	rotationState--;
+
+	if (rotationState == -1)
+	{
+		rotationState = (int)cells.size() - 1;
+	}
+}

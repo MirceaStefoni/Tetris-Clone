@@ -23,6 +23,8 @@ public:
 
 	void TetrominoRotate();
 
+	void TetrominoUndoRotate();
+
 private:
 	int cellSize;
 	int rotationState;
